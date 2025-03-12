@@ -74,6 +74,32 @@ def find_course():
     else:
         print("Course not found.")
 
+def update_student():
+    student_id = input("Enter student ID to update: ")
+    student = Student.find(session, int(student_id))
+    if student:
+        new_name = input("Enter new name: ")
+        new_course_id = input("Enter new course ID (or leave blank for no course): ")
+        new_course_id = int(new_course_id) if new_course_id else None
+        student.name = new_name
+        student.course_id = new_course_id
+        session.commit()
+        print("Student updated successfully.")
+    else:
+        print("Student not found.")
+
+
+def update_course():
+    course_id = input("Enter course ID to update: ")
+    course = Course.find(session, int(course_id))
+    if course:
+        new_title = input("Enter new title: ")
+        course.title = new_title
+        session.commit()
+        print("Course updated successfully.")
+    else:
+        print("Course not found.")
+
 def main_menu():
     while True:
         print("\nMain Menu")
@@ -100,7 +126,8 @@ def students_menu():
         print("2. Delete Student")
         print("3. Display All Students")
         print("4. Find Student by ID")
-        print("5. Back to Main Menu")
+        print("5. Update Student")
+        print("6. Back to Main Menu")
 
         choice = input("Select an option: ")
         if choice == '1':
@@ -112,6 +139,8 @@ def students_menu():
         elif choice == '4':
             find_student()
         elif choice == '5':
+            update_student()
+        elif choice == '6':
             break
         else:
             print("Invalid choice, please try again.")
@@ -123,7 +152,8 @@ def courses_menu():
         print("2. Delete Course")
         print("3. Display All Courses")
         print("4. Find Course by ID")
-        print("5. Back to Main Menu")
+        print("5. Update Course")
+        print("6. Back to Main Menu")
 
         choice = input("Select an option: ")
         if choice == '1':
@@ -135,6 +165,8 @@ def courses_menu():
         elif choice == '4':
             find_course()
         elif choice == '5':
+            update_course()
+        elif choice == '6':
             break
         else:
             print("Invalid choice, please try again.")
