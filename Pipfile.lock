@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8770ac624d9d359d9d77fd2bad1aad993badbb47afc4dffa2b6e2c4a1ec1428f"
+            "sha256": "77f5cce1dbcfc905692c1fcfe85cc078555e3d082dd2847e14a62b829aad9c32"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,6 +24,15 @@
             "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==1.15.1"
+        },
+        "faker": {
+            "hashes": [
+                "sha256:2598f78b76710a4ed05e197dda5235be409b4c291ba5c9c7514989cfbc7a5144",
+                "sha256:d2e4e2a30d459a8ec0ae52a552aa51c48973cb32cf51107dee90f58a8322a880"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==37.0.0"
         },
         "greenlet": {
             "hashes": [
@@ -250,6 +259,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==4.12.2"
+        },
+        "tzdata": {
+            "hashes": [
+                "sha256:24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694",
+                "sha256:7e127113816800496f027041c570f50bcd464a020098a3b6b199517772303639"
+            ],
+            "markers": "python_version >= '2'",
+            "version": "==2025.1"
         }
     },
     "develop": {}
